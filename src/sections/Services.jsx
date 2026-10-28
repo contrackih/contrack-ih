@@ -1,70 +1,56 @@
-import { useState } from 'react';
-import { ArrowUpRight, Plus, Minus } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { services } from '../data/services.js';
 
 export default function Services() {
-  const [openService, setOpenService] = useState(0);
-
   return (
-    <section id="services" className="py-20 lg:py-32 relative">
+    <section id="services" className="py-16 lg:py-24 bg-navy-pale/30 relative">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          <div className="lg:col-span-2">
-            <span className="mono-font text-[11px] tracking-[0.2em] text-navy-mid uppercase">
-              [ 03 / Services ]
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 lg:mb-10">
+          <div>
+            <span className="mono-font text-[12px] tracking-[0.2em] text-navy-mid uppercase">
+              Services
             </span>
-          </div>
-          <div className="lg:col-span-7">
-            <h2 className="display-font font-light text-5xl lg:text-7xl leading-[0.95] tracking-tight">
-              Eight ways <span className="italic text-navy-mid">we get involved</span>.
+            <h2 className="display-font font-semibold text-3xl lg:text-5xl tracking-tight mt-3">
+              What we <span className="italic font-normal text-navy-mid">do for you.</span>
             </h2>
           </div>
-          <div className="lg:col-span-3 lg:pt-6">
-            <p className="text-sm text-navy/70 leading-relaxed">
-              From the first whiteboard sketch to the post-launch retainer — we cover the full arc
-              of what it takes to ship and keep shipping.
-            </p>
-          </div>
+          <p className="text-sm text-navy/70 max-w-sm leading-relaxed">
+            From the first whiteboard sketch to the post-launch retainer — we cover the full arc of
+            what it takes to ship and keep shipping.
+          </p>
         </div>
 
-        <div className="border-t border-navy/15">
-          {services.map((s, i) => (
-            <div key={i} className="border-b border-navy/15 group">
-              <button
-                onClick={() => setOpenService(openService === i ? -1 : i)}
-                className="w-full py-6 lg:py-8 flex items-center justify-between text-left transition-all hover:px-2"
-              >
-                <div className="flex items-baseline gap-6 lg:gap-10">
-                  <span className="mono-font text-xs text-navy-mid">{s.num}</span>
-                  <h3 className="display-font text-2xl lg:text-4xl font-light tracking-tight">
-                    {s.title}
-                  </h3>
-                </div>
-                <span className="shrink-0 ml-4 w-10 h-10 border border-navy/20 flex items-center justify-center group-hover:bg-navy group-hover:text-white transition-colors">
-                  {openService === i ? <Minus size={14} /> : <Plus size={14} />}
-                </span>
-              </button>
-              {openService === i && (
-                <div className="pb-8 lg:pb-10 grid lg:grid-cols-12 gap-6 animate-reveal">
-                  <div className="lg:col-start-3 lg:col-span-7">
-                    <p className="text-base lg:text-lg leading-relaxed text-navy/80 mb-6">
-                      {s.desc}
-                    </p>
-                    <a
-                      href="#contact"
-                      className="group/cta inline-flex items-center gap-2 text-sm font-medium border-b border-navy pb-1"
-                    >
-                      {s.cta}{' '}
-                      <ArrowUpRight
-                        size={14}
-                        className="group-hover/cta:rotate-45 transition-transform"
-                      />
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-navy/10 border border-navy/10">
+          {services.map((s) => (
+            <a
+              key={s.num}
+              href="#contact"
+              className="group bg-white p-6 lg:p-8 flex flex-col hover:bg-navy hover:text-white transition-colors duration-300"
+            >
+              <span className="mono-font text-xs text-navy-mid group-hover:text-navy-pale">{s.num}</span>
+              <h3 className="text-lg lg:text-xl font-semibold tracking-tight mt-4 mb-3">{s.title}</h3>
+              <p className="text-sm leading-relaxed text-navy/70 group-hover:text-white/75 flex-1">
+                {s.desc}
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold mt-6">
+                {s.cta}
+                <ArrowUpRight size={13} className="group-hover:rotate-45 transition-transform" />
+              </span>
+            </a>
           ))}
+        </div>
+
+        <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <p className="display-font font-semibold text-xl lg:text-2xl tracking-tight">
+            Not sure where to start? <span className="italic font-normal text-navy-mid">Talk it through with us.</span>
+          </p>
+          <a
+            href="#contact"
+            className="group bg-navy text-white px-6 py-3.5 text-sm font-semibold tracking-wide flex items-center gap-2 hover:bg-navy-mid transition-colors self-start"
+          >
+            BOOK A FREE CONSULT
+            <ArrowUpRight size={15} className="group-hover:rotate-45 transition-transform" />
+          </a>
         </div>
       </div>
     </section>

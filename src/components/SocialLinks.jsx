@@ -1,4 +1,4 @@
-import { Instagram, Twitter } from 'lucide-react';
+import { Instagram, Twitter, Linkedin } from 'lucide-react';
 import { socials } from '../data/socials.js';
 
 // TikTok icon — lucide-react doesn't have it, so we use a custom SVG
@@ -12,6 +12,7 @@ const ICONS = {
   Instagram: Instagram,
   X: Twitter,
   TikTok: TikTokIcon,
+  LinkedIn: Linkedin,
 };
 
 /**
@@ -48,7 +49,7 @@ export default function SocialLinks({ variant = 'compact', tone = 'dark' }) {
 
   if (variant === 'large') {
     return (
-      <div className="grid sm:grid-cols-3 gap-px bg-current/20 border border-current/20">
+      <div className="grid sm:grid-cols-2 gap-px bg-current/20 border border-current/20">
         {socials.map((s) => {
           const Icon = ICONS[s.name];
           return (

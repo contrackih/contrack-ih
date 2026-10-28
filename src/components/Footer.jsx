@@ -5,10 +5,9 @@ import logoLight from '../assets/images/contrack-logo-white.png';
 
 const EXPLORE_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Work', to: '/projects' },
+  { label: 'Projects', to: '/projects' },
   { label: 'Services', to: '/#services' },
   { label: 'About', to: '/#about' },
-  { label: 'Insights', to: '/#insights' },
   { label: 'Contact', to: '/#contact' },
 ];
 
@@ -17,30 +16,8 @@ const CERTS = ['PMP', 'CSM', 'CAC REGD.', 'ISO-Aligned'];
 
 export default function Footer({ time }) {
   return (
-    <footer className="bg-navy text-white border-t border-white/10 pt-20 pb-8">
+    <footer className="bg-navy text-white border-t border-white/10 pt-16 pb-8">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-
-        {/* SOCIAL CTA — top of footer, bold and unmissable */}
-        <div className="mb-16 lg:mb-20 pb-16 lg:pb-20 border-b border-white/10">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
-            <div className="lg:col-span-5">
-              <span className="mono-font text-[11px] tracking-[0.2em] text-navy-pale uppercase">
-                [ Stay Connected ]
-              </span>
-              <h2 className="display-font font-light text-4xl lg:text-6xl leading-[0.95] tracking-tight mt-4">
-                Follow our<br />
-                <span className="italic text-navy-pale">build journey</span>.
-              </h2>
-              <p className="text-navy-pale/80 mt-6 max-w-md leading-relaxed">
-                Behind-the-scenes glimpses, team stories, and product launches — straight from
-                Abuja.
-              </p>
-            </div>
-            <div className="lg:col-span-7 lg:pt-4">
-              <SocialLinks variant="large" tone="light" />
-            </div>
-          </div>
-        </div>
 
         {/* Main footer grid */}
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
@@ -59,8 +36,12 @@ export default function Footer({ time }) {
               anywhere.
             </p>
             <div className="mono-font text-xs space-y-2">
-              <a href='mailto:inquiries@contrack.ng' className="text-navy-pale/60">inquiries@contrack.ng</a>
+              <a href='mailto:inquiries@contrack.ng' className="text-navy-pale/60 block">inquiries@contrack.ng</a>
               <div className="text-navy-pale/60">Plot No 1099, Mabushi District, Abuja</div>
+              <div className="text-navy-pale/60">Mon – Fri, 9am – 6pm WAT</div>
+            </div>
+            <div className="mt-6">
+              <SocialLinks variant="compact" tone="light" />
             </div>
           </div>
 
