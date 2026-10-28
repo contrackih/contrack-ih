@@ -29,10 +29,10 @@ export default function SaasProduct() {
               </span>
             </div>
 
-            <h2 className="display-font font-light text-5xl lg:text-7xl leading-[0.95] tracking-tight mb-8">
+            <h2 className="display-font font-semibold text-5xl lg:text-7xl leading-[0.95] tracking-tight mb-8">
               Construction Tracker.
               <br />
-              <span className="italic text-navy-mid">Projects on track, from anywhere.</span>
+              <span className="italic font-normal text-navy-mid">Projects on track, from anywhere.</span>
             </h2>
 
             <p className="text-base lg:text-lg text-navy/80 leading-relaxed mb-10 max-w-2xl">

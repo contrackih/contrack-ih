@@ -1,19 +1,21 @@
 // ── Image imports ──────────────────────────────────────────────
 // JETOps (jet-ops-1 to jet-ops-6)
-import jetOps1 from '../assets/images/jet-ops-1.png'; // 2558×1260 — wide hero
 import jetOps2 from '../assets/images/jet-ops-2.png'; // 1200×1210 — near-square
 import jetOps3 from '../assets/images/jet-ops-3.png'; // 914×644   — 4:3
 import jetOps4 from '../assets/images/jet-ops-4.png'; // 1206×518  — ultra-wide
 import jetOps5 from '../assets/images/jet-ops-5.png'; // 1206×518  — ultra-wide
 import jetOps6 from '../assets/images/jet-ops-6.png'; // 1566×1048 — 3:2 tall side
 
+import jetOpsNew from '../assets/images/jet-ops-home-2026.png'; // 1800×1008 — current homepage
+
 // DomesticStaffApp (dsa-1 to dsa-6)
-import dsa1 from '../assets/images/dsa-1.png'; // 2258×1246 — wide hero
 import dsa2 from '../assets/images/dsa-2.png'; // 2258×1246 — wide tall side
 import dsa3 from '../assets/images/dsa-3.png'; // 1902×884  — wide
 import dsa4 from '../assets/images/dsa-4.png'; // 1326×1086 — near-square
 import dsa5 from '../assets/images/dsa-5.png'; // 1310×1272 — near-square
 import dsa6 from '../assets/images/dsa-6.png'; // 1326×1086 — near-square
+
+import dsaNew from '../assets/images/dsa-home-2026.png'; // 1800×1017 — current homepage
 
 // ZARI (zari-1 to zari-6)
 import zari1 from '../assets/images/zari-1.png'; // 2406×1254 — wide hero
@@ -35,12 +37,10 @@ import zari6 from '../assets/images/zari-6.png'; // 2000×1042 — wide
 export const projects = [
   {
     slug: 'jetops',
-    name: 'JETOps',
+    name: 'JetOps',
     sector: 'Aviation Operations SaaS',
     year: '2026',
     role: 'SaaS Product Build',
-    duration: 'Ongoing',
-    teamSize: 'In development',
     featuredOnHome: true,
     summary:
       'Aviation operations and charter coordination platform designed for private jet operators and brokers, featuring aircraft availability management, booking workflows, operational dashboards, and broker coordination tools.',
@@ -48,29 +48,26 @@ export const projects = [
       'Private jet operators and brokers rely on fragmented tools — spreadsheets, WhatsApp threads, and legacy software — to manage aircraft availability, bookings, and crew. Errors are costly and coordination breakdowns directly impact revenue.',
     solution:
       'A purpose-built SaaS platform covering the full operational arc: aircraft availability calendar, booking and quote workflows, broker coordination portal, crew scheduling, and real-time operational dashboards for management oversight.',
-    impact:
-      'Currently in active development. Designed to reduce booking coordination time by over 70% and give operators a single source of truth for fleet status and revenue.',
+    impact: null,
     tags: ['SaaS', 'Web App', 'Mobile', 'Aviation', 'Operations'],
-    coverImage: jetOps1,
+    coverImage: jetOpsNew,
     gallery: [
-      jetOps1, // [0] hero — 2558×1260 wide landscape, JETOps homepage
+      jetOpsNew, // [0] hero — 2558×1260 wide landscape, JETOps homepage
       jetOps2, // [1] 2×2 — 1200×1210 near-square, booking form
       jetOps3, // [2] 2×2 — 914×644, broker network section
       jetOps4, // [3] 2×2 — 1206×518 ultra-wide, "Need a flight?" CTA
       jetOps5, // [4] 2×2 — 1206×518 ultra-wide, "Charter Operator?" CTA
       jetOps6, // [5] side — 1566×1048, built for charter operators grid
     ],
-    liveUrl: null,
+    liveUrl: 'https://jetops.aero',
     testimonial: null,
   },
   {
     slug: 'domestic-staff-app',
-    name: 'DomesticStaffApp',
+    name: 'Domestic Staff App',
     sector: 'Workforce & Household Platform',
     year: '2025',
     role: 'Platform Build',
-    duration: 'Ongoing',
-    teamSize: 'In development',
     featuredOnHome: true,
     summary:
       'Domestic staffing and workforce platform connecting households with verified domestic workers through onboarding, KYC verification, and operational management workflows.',
@@ -78,19 +75,18 @@ export const projects = [
       'The domestic staffing market in Nigeria operates almost entirely on informal referrals, with no verification, no contracts, and no recourse when placements go wrong — for either the household or the worker.',
     solution:
       'A two-sided marketplace with rigorous KYC and background verification for workers, structured onboarding flows, contract management, payment rails, and an employer dashboard for ongoing workforce management.',
-    impact:
-      'Currently in active development. Addresses a significant trust gap in a market with millions of active placements annually.',
+    impact: null,
     tags: ['SaaS', 'Marketplace', 'Mobile App', 'Platform', 'KYC'],
-    coverImage: dsa1,
+    coverImage: dsaNew,
     gallery: [
-      dsa1, // [0] hero — 2258×1246 wide, landing page
+      dsaNew, // [0] hero — 2258×1246 wide, landing page
       dsa4, // [1] 2×2 — 1326×1086 near-square, service personnel listing
       dsa5, // [2] 2×2 — 1310×1272 near-square, rate the app screen
       dsa6, // [3] 2×2 — 1326×1086 near-square, create ticket screen
       dsa3, // [4] 2×2 — 1902×884 wide, dashboard welcome screen
       dsa2, // [5] side — 2258×1246 wide, sign-up screen
     ],
-    liveUrl: null,
+    liveUrl: 'https://domesticstaffapp.com',
     testimonial: null,
   },
   {
@@ -99,17 +95,15 @@ export const projects = [
     sector: 'E-Commerce Platform',
     year: '2024',
     role: 'Full product build',
-    duration: '6 months',
-    teamSize: '5 engineers + 1 PM',
     featuredOnHome: true,
     summary:
-      'Gift-based e-commerce platform with inventory automation, real-time payments, and a 3× customer base growth in six months.',
+      'Gift-based e-commerce platform with inventory automation and real-time payments — 3,500+ orders completed and 8,500+ items sold.',
     challenge:
       'ZARI needed a gift-focused e-commerce platform that could handle real-time inventory across multiple vendors, secure payment processing for the Nigerian market, and a delightful gifting experience that worked across mobile and desktop.',
     solution:
       'A custom platform with vendor inventory sync, Paystack integration with fallback gateways, a curated catalog system, and a checkout flow optimized for gift purchases — delivery scheduling, gift notes, anonymous sender option.',
     impact:
-      '3× growth in customer base within six months of launch. Average order value increased 47% after introducing curated gift bundles. Cart abandonment dropped to 18% — well below industry average.',
+      '3,500+ orders completed and 8,500+ items sold through the platform.',
     tags: ['E-Commerce', 'Web App', 'Mobile App', 'Payments', 'Inventory'],
     coverImage: zari1,
     gallery: [
@@ -121,11 +115,7 @@ export const projects = [
       zari2, // [5] side — 2510×1274 wide, mobile app features
     ],
     liveUrl: 'https://zari.ng',
-    testimonial: {
-      quote:
-        "Contrack didn't just build us a website — they built infrastructure that's scaled with us through three growth phases without breaking a sweat.",
-      author: 'ZARI Founder',
-    },
+    testimonial: null,
   },
   {
     slug: 'flybird',
@@ -133,17 +123,14 @@ export const projects = [
     sector: 'Private Aviation ERP',
     year: '2024',
     role: 'ERP + Mobile + Web',
-    duration: '8 months',
-    teamSize: '6 engineers + 1 PM + 1 designer',
-    featuredOnHome: true,
+    featuredOnHome: false,
     summary:
       'ERP and booking management system developed for a private jet charter operator, supporting aircraft operations, bookings, payments, crew coordination, and operational workflows.',
     challenge:
-      "FlyBird needed to consolidate eight disconnected tools into one platform. In high-stakes aviation, booking errors, crew scheduling conflicts, and payment delays aren't just inconvenient — they're expensive.",
+      "FlyBird needed to consolidate a set of disconnected tools into one platform. In high-stakes aviation, booking errors, crew scheduling conflicts, and payment delays aren't just inconvenient — they're expensive.",
     solution:
       'A unified ERP covering bookings, fleet management, crew rosters, payments, and customer CRM — plus a customer-facing mobile app (iOS/Android) for quote requests, flight tracking, and concierge communication.',
-    impact:
-      'Booking turnaround reduced from 4 hours to 22 minutes. Crew scheduling conflicts dropped 89%. The mobile app now handles 60% of new booking enquiries.',
+    impact: null,
     tags: ['ERP', 'Operations', 'Dashboard', 'Mobile', 'Aviation'],
     coverImage: null,
     gallery: [],
@@ -152,45 +139,39 @@ export const projects = [
   },
   {
     slug: 'moh40',
-    name: 'Moh40',
-    sector: 'Logistics',
+    name: 'Moh40 Worldwide',
+    sector: 'Cargo & Logistics',
     year: '2023',
     role: 'Dashboard + Payments',
-    duration: '4 months',
-    teamSize: '4 engineers',
-    featuredOnHome: false,
+    featuredOnHome: true,
     summary:
       'Cargo logistics dashboard with secure payment rails and live shipment visibility.',
     challenge:
       "Moh40's clients needed transparency. Cargo movements were tracked across spreadsheets, WhatsApp messages, and phone calls — leading to disputes, delayed payments, and lost shipments.",
     solution:
       'A real-time dashboard with GPS-tracked shipment status, an escrow-style payment system, automated invoicing, and a client portal where shippers can monitor cargo from pickup to delivery.',
-    impact:
-      'Payment cycle shortened from 21 days to 6 days on average. Dispute volume dropped 73%. Client retention improved measurably in the first quarter post-launch.',
+    impact: null,
     tags: ['Dashboard', 'Logistics', 'Fintech', 'React', 'Django'],
     coverImage: null,
     gallery: [],
-    liveUrl: null,
+    liveUrl: 'https://moh40worldwide.com',
     testimonial: null,
   },
   {
     slug: 'kdin',
     name: 'KDIN',
-    sector: 'NGO',
+    sector: 'Tech Ecosystem',
     year: '2023',
-    role: 'M&E Platform',
-    duration: '5 months',
-    teamSize: '3 engineers + 1 PM',
+    role: 'Digital Events & Ecosystem Partner',
     featuredOnHome: false,
     summary:
-      'Monitoring & Evaluation dashboard with impact tracking for a donor-funded development program.',
+      "Kano Digital Innovation Network — Kano's leading tech ecosystem, connecting 200,000+ young professionals through digital conferences and training.",
     challenge:
-      'KDIN runs multiple donor-funded programs across Northern Nigeria. Reporting to international donors required gathering, validating, and visualizing data from over a dozen field locations — manually, monthly, and painfully.',
+      'Northern Nigeria has a large, fast-growing pool of young tech talent, but few platforms bringing that talent together with investors, industry, and training opportunities.',
     solution:
-      'A custom M&E platform with offline-capable mobile data collection for fieldworkers, automated impact metric calculations, and one-click donor report generation.',
-    impact:
-      'Monthly reporting cycle compressed from 2 weeks to 3 days. Donor confidence improved with audit-ready exports. Program leads now spend their time on program design, not data wrangling.',
-    tags: ['M&E', 'NGO', 'Dashboard', 'Offline-first', 'Reporting'],
+      'Contrack co-hosts digital events with KDIN, including the Digital Kano Conference and the Northern Investment Summit & Expo, alongside hands-on training for the network.',
+    impact: null,
+    tags: ['Tech Ecosystem', 'Community', 'Events', 'Training', 'Kano'],
     coverImage: null,
     gallery: [],
     liveUrl: null,
@@ -199,6 +180,7 @@ export const projects = [
 ];
 
 export const featuredProjects = projects.filter((p) => p.featuredOnHome);
+export const moreProjects = projects.filter((p) => !p.featuredOnHome);
 
 export function getProjectBySlug(slug) {
   return projects.find((p) => p.slug === slug);

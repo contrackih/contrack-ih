@@ -73,10 +73,10 @@ export default function ProjectDetail() {
             </span>
           </div>
           <div className="lg:col-span-10">
-            <h1 className="display-font font-light text-4xl lg:text-7xl leading-[0.92] tracking-tight mb-4">
+            <h1 className="display-font font-semibold text-4xl lg:text-7xl leading-[0.92] tracking-tight mb-4">
               {project.name}
             </h1>
-            <p className="text-base lg:text-xl text-navy/75 leading-relaxed max-w-3xl italic display-font font-light">
+            <p className="text-base lg:text-xl text-navy/75 leading-relaxed max-w-3xl italic display-font font-semibold">
               {project.summary}
             </p>
           </div>
@@ -122,12 +122,11 @@ export default function ProjectDetail() {
         </div>
 
         {/* Meta strip */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-navy/15 mb-10 lg:mb-14">
+        <div className="grid grid-cols-2 lg:grid-cols-3 border-t border-navy/15 mb-10 lg:mb-14">
           {[
             { label: 'Year', value: project.year },
             { label: 'Role', value: project.role },
-            { label: 'Duration', value: project.duration },
-            { label: 'Team', value: project.teamSize },
+            { label: 'Sector', value: project.sector },
           ].map((m, i) => (
             <div key={i} className="border-b lg:border-b-0 lg:border-r last:border-r-0 border-navy/15 py-5 lg:py-6 lg:px-5">
               <div className="mono-font text-[9px] tracking-[0.2em] uppercase text-navy-mid mb-1.5">
@@ -144,7 +143,7 @@ export default function ProjectDetail() {
             { num: '01', label: 'Challenge', content: project.challenge },
             { num: '02', label: 'Solution', content: project.solution },
             { num: '03', label: 'Impact', content: project.impact },
-          ].map((s) => (
+          ].filter((s) => s.content).map((s) => (
             <div key={s.num} className="grid lg:grid-cols-12 gap-6">
               <div className="lg:col-span-3">
                 <div className="mono-font text-[10px] text-navy-mid mb-1">{s.num}</div>

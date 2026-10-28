@@ -14,7 +14,7 @@ export const services = [
   {
     num: '03',
     title: 'Cybersecurity & IT Audits',
-    desc: 'System audits, threat assessments, secure architecture reviews. Annual retainers from ₦100,000/month.',
+    desc: 'System audits, threat assessments, secure architecture reviews, and ongoing retainer support.',
     cta: 'Secure your tech',
   },
   {
@@ -46,5 +46,11 @@ export const services = [
     title: 'Product Co-Development',
     desc: 'High-potential ideas, low capital? We co-build. You bring the vision; we bring the engineering muscle.',
     cta: "Let's build together",
+  },
+  {
+    num: '09',
+    title: 'Social Media Management',
+    desc: 'Full-service strategy, content creation, and audience growth management.',
+    cta: 'Grow your audience',
   },
 ];

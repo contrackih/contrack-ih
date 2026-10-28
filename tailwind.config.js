@@ -14,7 +14,7 @@ export default {
       fontFamily: {
         display: ['Montserrat', 'sans-serif'],
         sans: ['Montserrat', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       animation: {
         marquee: 'marquee 40s linear infinite',

@@ -4,14 +4,13 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 import Logo from './Logo.jsx';
 
 const NAV_LINKS = [
-  { label: 'Work', to: '/projects' },
+  { label: 'Projects', to: '/#work' },
   { label: 'Services', to: '/#services' },
   { label: 'About', to: '/#about' },
-  { label: 'Insights', to: '/#insights' },
   { label: 'Contact', to: '/#contact' },
 ];
 
-export default function Navbar({ time }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -25,7 +24,7 @@ export default function Navbar({ time }) {
             <Link
               key={item.label}
               to={item.to}
-              className={`hover-line text-sm font-medium tracking-wide ${
+              className={`hover-line text-[15px] font-medium tracking-wide ${
                 location.pathname === item.to ? 'font-semibold' : ''
               }`}
             >
@@ -35,9 +34,6 @@ export default function Navbar({ time }) {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
-          <span className="mono-font text-[10px] text-navy-mid tracking-wider">
-            <span className="animate-blink">●</span> {time}
-          </span>
           <Link
             to="/#contact"
             className="bg-navy text-white px-5 py-2.5 text-sm font-medium hover:bg-navy-mid transition-colors flex items-center gap-2"

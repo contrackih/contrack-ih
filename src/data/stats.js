@@ -1,4 +1,5 @@
 export const stats = [
+  { num: '3', label: 'SaaS Products Launched', sub: 'Co-founded by Contrack' },
   { num: '20+', label: 'IT Projects Delivered', sub: 'Across 4 sectors' },
   { num: '22', label: 'Years Combined Leadership', sub: 'PMP & CSM Certified' },
   { num: '15+', label: 'Mentorships & Trainees', sub: 'Young professionals' },
@@ -10,6 +11,7 @@ export const credentials = [
   'CSM CERTIFIED',
   'CAC REGISTERED',
   'CYBERSECURITY COMPLIANT',
+  'ISO STANDARDS COMPLIANT',
   '20+ PROJECTS DELIVERED',
   'REMOTE-FIRST',
   'ABUJA HQ',

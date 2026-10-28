@@ -1,17 +1,22 @@
 export const socials = [
   {
     name: 'Instagram',
-    handle: '@contrack_ih',
-    url: 'https://www.instagram.com/contrack_ih?igsh=b2JsNzM5NmNxcm9t&utm_source=qr',
+    handle: '@contrackinnovationhub',
+    url: 'https://www.instagram.com/contrackinnovationhub/',
   },
   {
     name: 'TikTok',
-    handle: '@contrackih',
-    url: 'https://www.tiktok.com/@contrackih?_r=1&_t=ZS-96Fgl7fvcaS',
+    handle: '@jetops.aero',
+    url: 'https://www.tiktok.com/@jetops.aero',
   },
   {
     name: 'X',
     handle: '@contrackih',
     url: 'https://x.com/contrackih?s=21&t=lCPD0U_WTZ54KoLNcTV-QA',
+  },
+  {
+    name: 'LinkedIn',
+    handle: 'Contrack IH',
+    url: 'https://linkedin.com/company/contrack-innovation-hub',
   },
 ];

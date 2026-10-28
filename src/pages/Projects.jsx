@@ -34,9 +34,9 @@ export default function Projects() {
             </span>
           </div>
           <div className="lg:col-span-10">
-            <h1 className="display-font font-light text-4xl lg:text-6xl leading-[0.95] tracking-tight mb-3">
+            <h1 className="display-font font-semibold text-4xl lg:text-6xl leading-[0.95] tracking-tight mb-3">
               Selected work.{' '}
-              <span className="italic text-navy-mid">Honestly built.</span>
+              <span className="italic font-normal text-navy-mid">Honestly built.</span>
             </h1>
             <p className="text-sm text-navy/60 max-w-2xl">
               {projects.length} projects across aviation, e-commerce, logistics, and the public sector.
@@ -123,9 +123,9 @@ export default function Projects() {
 
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-navy/15">
-          <h2 className="display-font font-light text-2xl lg:text-3xl tracking-tight">
+          <h2 className="display-font font-semibold text-2xl lg:text-3xl tracking-tight">
             Have a project?{' '}
-            <span className="italic text-navy-mid">Let's build it.</span>
+            <span className="italic font-normal text-navy-mid">Let's build it.</span>
           </h2>
           <Link
             to="/#contact"

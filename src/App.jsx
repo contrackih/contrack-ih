@@ -38,7 +38,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-navy">
       <ScrollToHashOrTop />
-      <Navbar time={time} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home scrollY={scrollY} />} />
         <Route path="/projects" element={<Projects />} />
